@@ -22,11 +22,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> with AppUtils {
       print("please connect your Network");
     } else {
       GeoCodeResponse geoCodeResponse = GeoCodeResponse.fromJson(jsonDecode(stringData));
-      // print(geoCodeResponse.routes);
-      // for(var bounds in geoCodeResponse.routes!){
-      //   print("northEast:${bounds.bounds?.northeast?.lat},${bounds.bounds?.northeast?.lng}");
-      //   print("southWest:${bounds.bounds?.southwest?.lat}${bounds.bounds?.southwest?.lng}");
-      // }
       print(geoCodeResponse.toJson());
     }
   }
